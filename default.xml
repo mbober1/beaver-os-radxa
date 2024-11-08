@@ -16,8 +16,8 @@
   <project revision="styhead" remote="clang" name="meta-clang" path="sources/meta-clang"/>
   <project revision="styhead" remote="oe" name="meta-openembedded" path="sources/meta-openembedded"/>
   <project revision="master"  remote="swupdate" name="meta-swupdate" path="sources/meta-swupdate"/>
-  <project revision="styhead" remote="mbober" name="Radxa-Zero-3-Lab" path="sources/meta-bober">
-    <linkfile dest="README" src="README"/>
+  <project revision="styhead" remote="mbober" name="meta-beaver" path="sources/meta-beaver">
+    <linkfile dest="README" src="README.md"/>
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
 
