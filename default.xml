@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <default sync-j="4" revision="styhead"/>
+
+  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
+  <remote fetch="https://git.openembedded.org/git" name="oe"/>
+  <remote fetch="https://github.com/mbober1" name="mbober"/>
+  <remote fetch="https://github.com/sbabic" name="swupdate"/>
+  <remote fetch="https://github.com/kraj" name="clang"/>
+
+  <project remote="yocto" name="poky" path="sources/poky"/>
+  <project remote="yocto" name="meta-arm" path="sources/meta-arm"/>
+  <project remote="yocto" name="meta-rockchip" path="sources/meta-rockchip" revision="master"/>
+  <project remote="yocto" name="meta-virtualization" path="sources/meta-virtualization" revision="master"/>
+  <project remote="clang" name="meta-clang" path="sources/meta-clang"/>
+  <project remote="oe" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="swupdate" name="meta-swupdate" path="sources/meta-swupdate"/>
+  <project remote="mbober" name="Radxa-Zero-3-Lab" path="sources/meta-bober"/>
+    <linkfile dest="README" src="README"/>
+    <linkfile dest="setup-environment" src="setup-environment"/>
+  </project>
+
+</manifest>
