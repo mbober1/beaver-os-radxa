@@ -1,14 +1,10 @@
-name: CI
+name: IMAGE
 
 on:
   push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+    paths:
+      - '*.xml'
 
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build:
     runs-on: ubuntu-22.04
@@ -18,17 +14,20 @@ jobs:
           curl https://storage.googleapis.com/git-repo-downloads/repo > repo
           chmod a+x repo
           printf "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com" > ~/.git-credentials
-          git config --global credential.helper 'store --file ~/.git-credentials'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Sync sources
         run: |
-          ./repo init -u https://github.com/${{ github.repository }}
-          ./repo sync -j$(nproc)
+          repo init -u https://github.com/${{ github.repository }}
+          repo sync -j$(nproc)
 
       - name: Setup Yocto env
         run: |
           chmod +x setup-environment
           ./setup-environment build
-      
+
+      - name: Build image
+        run: |
+          source sources/poky/oe-init-build-env
+          bitbake lab-image-minimal-update
