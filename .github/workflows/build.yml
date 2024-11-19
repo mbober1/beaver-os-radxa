@@ -26,3 +26,9 @@ jobs:
         run: |
           ./repo init -u https://github.com/${{ github.repository }}
           ./repo sync -j$(nproc)
+
+      - name: Setup Yocto env
+        run: |
+          chmod +x setup-environment
+          ./setup-environment build
+      
