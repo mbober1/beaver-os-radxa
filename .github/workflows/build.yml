@@ -13,11 +13,6 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     steps:
-      - uses: de-vri-es/setup-git-credentials@v2
-        with:
-          credentials: ${{secrets.GIT_CREDENTIALS}}
-
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
       
       - name: Setup git-repo
