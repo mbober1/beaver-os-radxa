@@ -18,8 +18,10 @@ jobs:
       
       - name: Setup git-repo
         run: |
-          curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-          chmod a+x ~/bin/repo
+          curl https://storage.googleapis.com/git-repo-downloads/repo > repo
+          chmod a+x repo
           
-      - name: Run a one-line script
-        run: repo init -u https://github.com/mbober1/beaver-os-radxa
+      - name: Sync sources
+        run: |
+          ./repo init -u https://github.com/mbober1/beaver-os-radxa
+          ./repo sync -j$(nproc)
