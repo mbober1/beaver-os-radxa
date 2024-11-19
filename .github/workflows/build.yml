@@ -13,6 +13,10 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     steps:
+      - uses: de-vri-es/setup-git-credentials@v2
+        with:
+          credentials: ${{secrets.GIT_CREDENTIALS}}
+
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
       
@@ -20,8 +24,12 @@ jobs:
         run: |
           curl https://storage.googleapis.com/git-repo-downloads/repo > repo
           chmod a+x repo
+          printf "https://mbober1:${{ secrets.GITHUB_TOKEN }}@github.com" > ~/.git-credentials
+          git config --global credential.helper 'store --file ~/.git-credentials'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Sync sources
         run: |
-          ./repo init -u https://github.com/mbober1/beaver-os-radxa
+          ./repo init -u ${{ github.repository }}
           ./repo sync -j$(nproc)
