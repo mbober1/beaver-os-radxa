@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: ghcr.io/mbober1/beaver-os-radxa
+    runs-on: ghcr.io/mbober1/beaver-os-radxa:latest
     steps:      
       - name: Setup git-repo
         run: |
