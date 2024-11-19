@@ -1,9 +1,10 @@
-name: IMAGE
+name: image
 
 on:
   push:
     paths:
       - '*.xml'
+      - '*.yml'
 
 jobs:
   build:
