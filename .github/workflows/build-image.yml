@@ -14,10 +14,8 @@ jobs:
        username: ${{ github.actor }}
        password: ${{ secrets.github_token }}
     steps:
-      - name: Setup git-repo
+      - name: Setup git credentials
         run: |
-          curl https://storage.googleapis.com/git-repo-downloads/repo > repo
-          chmod a+x repo
           printf "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com" > ~/.git-credentials
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
