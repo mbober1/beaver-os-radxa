@@ -21,8 +21,8 @@ RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
 
 ENV LANG=en_US.utf8
 
-USER build
-WORKDIR /home/build
+USER github
+WORKDIR /home/github
 
 RUN git config --global user.email "build@example.com" && \
     git config --global user.name "Build" && \
