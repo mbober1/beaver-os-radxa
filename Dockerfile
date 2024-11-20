@@ -11,10 +11,10 @@ RUN \
     nano sudo lzop screen curl
 
 RUN curl https://storage.googleapis.com/git-repo-downloads/repo > /bin/repo && chmod a+x /bin/repo
-RUN groupadd build -g 1000
-RUN useradd -ms /bin/bash -p build build -u 1028 -g 1000 && \
-        usermod -aG sudo build && \
-        echo "build:build" | chpasswd
+RUN groupadd github -g 1000
+RUN useradd -ms /bin/bash -p github github -u 1028 -g 1000 && \
+        usermod -aG sudo github && \
+        echo "github:github" | chpasswd
 
 RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
     locale-gen
