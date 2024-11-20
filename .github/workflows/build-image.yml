@@ -9,8 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image:  ubuntu:latest
-      # image:  ghcr.io/mbober1/beaver-os-radxa:latest
+      image:  mbober1/beaver-os-radxa:latest
       credentials:
        username: ${{ github.actor }}
        password: ${{ secrets.github_token }}
