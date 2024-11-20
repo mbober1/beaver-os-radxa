@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image:  mbober1/beaver-os-radxa:latest
+      image:  ghcr.io/mbober1/beaver-os-radxa:sha256-03681e52672a59b012eb7285bebdfeae75c5ca2cd236393dc9cf6331fcc5e648.sig
       credentials:
        username: ${{ github.actor }}
        password: ${{ secrets.github_token }}
