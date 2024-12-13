@@ -9,7 +9,7 @@
   <remote fetch="https://github.com/sbabic" name="swupdate"/>
   <remote fetch="https://github.com/kraj" name="clang"/>
 
-  <project revision="styhead" remote="oe"         name="openembedded-core"    path="sources/openembedded-core"/>
+  <project revision="styhead" remote="oe"         name="openembedded-core"    path="sources/oe-core"/>
   <project revision="master"  remote="oe"         name="bitbake"              path="sources/bitbake"/>
   <project revision="styhead" remote="oe"         name="meta-openembedded"    path="sources/meta-openembedded"/>
   <project revision="styhead" remote="yocto"      name="meta-arm"             path="sources/meta-arm"/>
