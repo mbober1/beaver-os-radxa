@@ -9,15 +9,15 @@
   <remote fetch="https://github.com/sbabic" name="swupdate"/>
   <remote fetch="https://github.com/kraj" name="clang"/>
 
-  <project revision="styhead" remote="yocto" name="poky" path="sources/poky"/>
-  <project revision="styhead" remote="oe" name="openembedded-core" path="sources/openembedded-core"/>
-  <project revision="styhead" remote="oe" name="meta-openembedded" path="sources/meta-openembedded"/>
-  <project revision="styhead" remote="yocto" name="meta-arm" path="sources/meta-arm"/>
-  <project revision="master"  remote="yocto" name="meta-rockchip" path="sources/meta-rockchip" />
-  <project revision="master"  remote="yocto" name="meta-virtualization" path="sources/meta-virtualization"/>
-  <project revision="styhead" remote="clang" name="meta-clang" path="sources/meta-clang"/>
-  <project revision="master"  remote="swupdate" name="meta-swupdate" path="sources/meta-swupdate"/>
-  <project revision="styhead" remote="mbober" name="meta-beaver" path="sources/meta-beaver">
+  <project revision="styhead" remote="oe"         name="openembedded-core"    path="sources/openembedded-core"/>
+  <project revision="master"  remote="oe"         name="bitbake"              path="sources/bitbake"/>
+  <project revision="styhead" remote="oe"         name="meta-openembedded"    path="sources/meta-openembedded"/>
+  <project revision="styhead" remote="yocto"      name="meta-arm"             path="sources/meta-arm"/>
+  <project revision="master"  remote="yocto"      name="meta-rockchip"        path="sources/meta-rockchip" />
+  <project revision="master"  remote="yocto"      name="meta-virtualization"  path="sources/meta-virtualization"/>
+  <project revision="styhead" remote="clang"      name="meta-clang"           path="sources/meta-clang"/>
+  <project revision="master"  remote="swupdate"   name="meta-swupdate"        path="sources/meta-swupdate"/>
+  <project revision="styhead" remote="mbober"     name="meta-beaver"          path="sources/meta-beaver">
     <linkfile dest="README" src="README.md"/>
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
