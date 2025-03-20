@@ -18,6 +18,7 @@
   <project revision="scarthgap"   remote="clang"      name="meta-clang"           path="sources/meta-clang"/>
   <project revision="scarthgap"   remote="swupdate"   name="meta-swupdate"        path="sources/meta-swupdate"/>
   <project revision="scarthgap"   remote="mbober"     name="meta-beaver"          path="sources/meta-beaver">
+  <project revision="scarthgap"   remote="mbober"     name="meta-radxa"           path="sources/meta-radxa">
     <linkfile dest="README" src="README.md"/>
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
